@@ -1,16 +1,52 @@
-# React + Vite
+# Product Store - React Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple and responsive React application that fetches and displays products from the FakeStore API with real-time search filtering.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Real-time product search
+- Responsive design
+- Loading and error states
+- Clean and modern UI
 
-## React Compiler
+## API Used
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+https://fakestoreapi.com/products
 
-## Expanding the ESLint configuration
+## Steps to Run
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Prerequisites
+
+- Node.js (v14 or higher)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository
+2. Navigate to project directory
+3. Install dependencies:
+
+```bash
+   npm install
+```
+
+### Running the Application
+
+```bash
+npm run dev
+```
+
+The application will open at `http://localhost:5173`
+
+## Technologies Used
+
+- React 18
+- Vite
+- Tailwind CSS
+- FakeStore API
+
+## Full Name
+
+Bipin Katuwal
+
+Task Completed: Yes

@@ -3,6 +3,7 @@ import ErrorMessage from './components/ErrorMessage'
 import LoadingSpinner from './components/LoadingSpinner';
 import SearchBar from './components/SearchBar';
 import ProductList from './components/ProductList';
+import Navigation from './components/Navigation';
 
 const App = () => {
   const [products, setProducts] = useState([])
@@ -43,7 +44,7 @@ const App = () => {
     }
 
     setFilteredProducts(results)
-  }, [searchTerm, filteredProducts, products])
+  }, [searchTerm, products])
 
   const handleSearchChange = (e) => {
     setSearchTerm(e.target.value);
@@ -51,14 +52,9 @@ const App = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <header className="bg-blue-600 text-white shadow-lg">
-        <div className="max-w-7xl mx-auto px-4 py-6">
-          <h1 className="text-3xl font-bold">Product Store</h1>
-          <p className="text-blue-100 mt-1">Discover amazing products</p>
-        </div>
-      </header>
+      <Navigation />
 
-      <main className="max-w-7xl mx-auto px-4 py-8">
+      <main className="max-w-7xl mx-auto px-4 py-8 pt-24">
         {loading ? (
           <LoadingSpinner />
         ) : error ? (
@@ -70,7 +66,7 @@ const App = () => {
                 searchTerm={searchTerm}
                 onSearchChange={handleSearchChange}
               />
-              <p className="text-gray-600 text-sm">
+              <p className="text-gray-800 font-semibold">
                 Showing {filteredProducts.length} of {products.length} products
               </p>
             </div>

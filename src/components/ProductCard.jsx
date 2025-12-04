@@ -1,30 +1,27 @@
 const ProductCard = ({ product }) => (
-    <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
-        <div className="aspect-square bg-gray-100 flex items-center justify-center p-4">
+    <div className="shadow rounded-2xl p-3
+     overflow-hidden">
+        <div className="aspect-square bg-gray-100 rounded-xl flex items-center justify-center p-4 overflow-hidden">
             <img
                 src={product.image}
                 alt={product.title}
-                className="max-h-full max-w-full object-contain"
+                className="max-h-full max-w-full object-contain hover:scale-110 transition-all duration-300"
             />
         </div>
-        <div className="p-4">
-            <h3 className="font-semibold text-lg mb-2 line-clamp-2 h-14">
-                {product.title}
-            </h3>
-            <div className="flex justify-between items-center mt-3">
-                <span className="text-2xl font-bold text-blue-600">
-                    ${product.price}
-                </span>
-                <span className="text-sm text-gray-500 bg-gray-100 px-3 py-1 rounded-full">
-                    {product.category}
-                </span>
-            </div>
-            <div className="mt-3 flex items-center">
-                <span className="text-yellow-500">★</span>
-                <span className="ml-1 text-sm text-gray-600">
+        <div className="mt-2">
+            <div className="flex items-center">
+                <span className="text-green-700 font-bold">★</span>
+                <span className="ml-1 text-sm text-green-700 font-semibold">
                     {product.rating.rate} ({product.rating.count})
                 </span>
             </div>
+            <h3 className="font-semibold line-clamp-1 mt-1">
+                {product.title}
+            </h3>
+
+            <span className="font-semibold text-slate-600 text-sm">
+                ${product.price}
+            </span>
         </div>
     </div>
 );
